@@ -1,0 +1,19 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+export async function getStaticPaths() {
+    const expeditions = await getCollection('expeditions');
+    return expeditions.map((expedition) => ({
+        params: { slug: expedition.slug },
+        props: { expedition },
+    }));
+}
+
+const { expedition } = Astro.props;
+const { Content } = await expedition.render();
+---
+
+<Base>
+    <h1>{expedition.data.title}</h1>
+    <Content />
+</Base>

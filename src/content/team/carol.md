@@ -1,0 +1,9 @@
+---
+name: Carol
+title: Advisory, networking
+blurb: As our past president, Carol brings her organizational skills and institutional memory to our organization.
+---
+
+Bill has been a birder as far back as he can remember, and migrated to SE Arizona with his wife upon retiring from the US Forest Service after 35 years. Bill is the father of four and grandfather of eight. A 50 year veteran of CBCs and 30 years of BBS, Bill has been a member of the rare bird committees in two states, including serving as Chair of the Colorado Bird Records Committee. Until retirement, he served as the chair of Central Hardwoods BCR/Joint Venture Management Board. Most days, you will find him walking the trails in Santa Cruz County.
+
+[board3@AZFO.org](mailto:board3@AZFO.org)

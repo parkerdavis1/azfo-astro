@@ -1,0 +1,36 @@
+---
+import ExpeditionCard from '../../../components/ExpeditionCard.astro';
+import Base from '../../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const expeditions = await getCollection('expeditions');
+console.log('expeditions', expeditions);
+---
+
+<Base>
+    <h1>Field Expeditions</h1>
+
+    <p>Not Just a Field Trip… AZFO Field Expeditions</p>
+
+    <p>
+        We have designed these expeditions with our mission in mind -- to study
+        Arizona’s birdlife. When you join in a Field Expedition, you are
+        contributing to the understanding of the seasonal status of birds around
+        our state. We may design an expedition in hopes of observing a single AZ
+        rarity suspected to be in an under-studied region. We might survey an
+        area to improve our knowledge of the winter distribution of species
+        there.
+    </p>
+
+    <p>These are birding field trips with a purpose.</p>
+
+    <p>
+        What we learn from these Expeditions will contribute to better
+        management of less-well-known tracts around our entire state, for the
+        benefit of birds and the habitat we share. Because we turn to
+        experienced ornithologists to identify areas in need of study, these
+        outings are citizen science at its best. We provide leaders, location,
+        and logistics. After that, we need YOU --to help gather the data.
+    </p>
+    {expeditions.map((exp) => <ExpeditionCard exp={exp} />)}
+</Base>

@@ -1,0 +1,10 @@
+---
+const {
+    slug,
+    data: { title, date },
+} = Astro.props.exp;
+---
+
+<a href={`/programs/expeditions/${slug}`}>
+    <p>{title} – <time>{date}</time></p>
+</a>

@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+
+import Base from '../layouts/Base.astro';
+import TeamCard from '../components/TeamCard.astro';
+
+const team = await getCollection('team');
+---
+
+<Base>
+    <h1>About</h1>
+    <p>
+        AZFO: An organization of birders dedicated to increasing the knowledge
+        of the changing status, identification, and distribution of Arizona's
+        birdlife.
+    </p>
+    <aside>
+        <p>
+            In pursuit of our AZFO mission, we offer a variety of programs, most
+            of which involve volunteer participation by interested birders
+            throughout Arizona. To find out more about programs that might
+            interest you:
+            <a href="/programs">Click here</a>
+        </p>
+    </aside>
+
+    <div>
+        <h2 id="team">Meet our AZFO Team Members</h2>
+        <ul>
+            {
+                team.map((person) => (
+                    <li>
+                        <TeamCard data={person} />
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</Base>
