@@ -1,15 +1,19 @@
 ---
 const {
     slug,
+    body,
     data: { name, title, blurb },
 } = Astro.props.data;
+
+const { Content } = await Astro.props.data.render();
 
 const birdEmojis = ['🕊️', '🦅', '🦆', '🦜', '🐥'];
 ---
 
-<p>
-    {birdEmojis[Math.floor(Math.random() * birdEmojis.length)]}
-    <a href=`/about/${slug}`>
-        {name} - {title}
-    </a>
-</p>
+<details>
+    <summary>{name} - {title}</summary>
+    <p>
+        {blurb}
+    </p>
+    <Content />
+</details>

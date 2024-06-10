@@ -1,0 +1,15 @@
+---
+const {
+    slug,
+    body,
+    data: { title, image, blurb, link },
+} = Astro.props.data;
+
+const { Content } = await Astro.props.data.render();
+---
+
+<h3>
+    {link ? <a href={link}>{title}</a> : title}
+</h3>
+<Content />
+<!-- <p><a href={link}>More Information</a></p> -->

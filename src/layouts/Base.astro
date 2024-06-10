@@ -1,5 +1,7 @@
 ---
-
+import Nav from '@components/Nav.astro';
+import { Image } from 'astro:assets';
+import AZFOsmall from 'src/assets/images/AZFOlogo_small.webp';
 ---
 
 <!doctype html>
@@ -7,65 +9,28 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AZFO</title>
+        <title>Arizona Field Ornithologists</title>
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
-        /></head
-    >
+        />
+    </head>
     <body
         ><header>
             <a href="/">
-                <h1>AZFO</h1>
+                <Image src={AZFOsmall} alt="AZFO logo" />
+                <!-- <h1>AZFO</h1> -->
             </a>
             <details>
-                <summary>Site Navigation</summary>
-                <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <ul>
-                            <li>
-                                <a href="/about#team">Team</a>
-                            </li>
-                            <li>
-                                <a href="/about#history">History</a>
-                            </li>
-                        </ul>
-                        <li><a href="/programs">Programs</a></li>
-                        <ul>
-                            <li>
-                                <a href="/programs/expeditions"
-                                    >Field Expeditions</a
-                                >
-                            </li>
-                            <li>
-                                <a href="https://arizonabirds.org"
-                                    >Arizona Birds Online Journal</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#">Counts and Surveys</a>
-                            </li>
-                            <li>
-                                <a href="#">Annual Meetings</a>
-                            </li>
-                            <li>
-                                <a href="#">Awards & Grants</a>
-                            </li>
-                            <li>
-                                <a href="#">eBird Gaps</a>
-                            </li>
-                        </ul>
-                        <li><a href="/membership">Join / Donate</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </nav>
+                <summary tabindex="1">Site Navigation</summary>
+                <Nav />
             </details>
         </header>
         <main>
             <slot />
         </main>
-        <footer></footer>
+        <footer>
+            &copy; Arizona Field Ornithologists {new Date().getFullYear()}
+        </footer>
     </body>
 </html>

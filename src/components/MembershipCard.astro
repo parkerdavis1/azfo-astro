@@ -1,0 +1,9 @@
+---
+const { name, cost, donate } = Astro.props.data;
+---
+
+<div>
+    <h3>{name}</h3>
+    <p>From {cost}</p>
+    <a href="#">{donate ? 'Donate' : 'Add to cart'}</a>
+</div>

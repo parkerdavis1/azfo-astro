@@ -1,0 +1,49 @@
+---
+import Base from '@layouts/Base.astro';
+---
+
+<Base>
+    <h1>Contact</h1>
+    <!-- <section>
+        <p>Want to get involved?</p>
+        <p>Hoping to join a field expedition?</p>
+        <p>
+            Thinking of using our eBird Gaps Program to improve knowledge of
+            birds in your region?
+        </p>
+        <p>Looking for something else?</p>
+    </section> -->
+
+    <section>
+        <!-- <h2>Contact Form</h2> -->
+        <p>
+            Right now we are looking for help with Field Expeditions, event
+            planning, social media, web and graphic design. Have a question or
+            comment? Let us know!
+        </p>
+        <form action="">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" />
+            <label for="last-name">Last Name</label>
+            <input type="text" name="last-name" id="last-name" />
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" required />
+            <label for="message">Message *</label>
+            <textarea name="message" id="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <section>
+        <h2>Information</h2>
+        <h3>Address</h3>
+        <address>10378 N 101st Pl<br />Scottsdale, AZ 85258</address>
+        <h3>Email</h3>
+        <p><a href="mailto:contact@azfo.org">contact@azfo.org</a></p>
+        <h3>Social Media</h3>
+        <p>
+            <a href="https://www.facebook.com/ArizonaFieldOrnithologists"
+                >Facebook</a
+            >
+        </p>
+    </section>
+</Base>

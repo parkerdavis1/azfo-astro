@@ -1,7 +1,8 @@
 ---
 title: Field Expedition to Search for Breeding Mountain Plovers
-date: May 31- June 2
+date: May 31 - June 2, 2024
 endDate: 2024-06-02
+image: ./images/2024-05-mountain-plovers.webp
 ---
 
 ## Registration
@@ -26,8 +27,8 @@ This is a great opportunity to learn and gain experience, enjoy the outdoors, an
 
 ## Maps and Information
 
-[Map 1](#)
+[Map 1 [pdf]](#)
 
-[Map 2](#)
+[Map 2 [pdf]](#)
 
-Find instructions on how to load Avenza maps [here](#).
+Find instructions on how to load Avenza maps [here [pdf]](#).

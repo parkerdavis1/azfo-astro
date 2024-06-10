@@ -3,14 +3,16 @@ import ExpeditionCard from '../../../components/ExpeditionCard.astro';
 import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
-const expeditions = await getCollection('expeditions');
+const expeditions = (await getCollection('expeditions')).sort(
+    (a, b) => b.data.endDate.getTime() - a.data.endDate.getTime()
+);
 console.log('expeditions', expeditions);
 ---
 
 <Base>
     <h1>Field Expeditions</h1>
 
-    <p>Not Just a Field Trip… AZFO Field Expeditions</p>
+    <p><em>Not Just a Field Trip… AZFO Field Expeditions</em></p>
 
     <p>
         We have designed these expeditions with our mission in mind -- to study
@@ -25,12 +27,17 @@ console.log('expeditions', expeditions);
     <p>These are birding field trips with a purpose.</p>
 
     <p>
-        What we learn from these Expeditions will contribute to better
+        What we learn from these expeditions will contribute to better
         management of less-well-known tracts around our entire state, for the
         benefit of birds and the habitat we share. Because we turn to
         experienced ornithologists to identify areas in need of study, these
         outings are citizen science at its best. We provide leaders, location,
-        and logistics. After that, we need YOU --to help gather the data.
+        and logistics. After that, we need YOU -- to help gather the data.
     </p>
+
+    <h2>Upcoming expeditions</h2>
+    <p>There are no upcoming expeditions.</p>
+
+    <h2>Past Expeditions</h2>
     {expeditions.map((exp) => <ExpeditionCard exp={exp} />)}
 </Base>

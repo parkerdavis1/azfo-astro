@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Image from 'astro/components/Image.astro';
 import { getCollection } from 'astro:content';
 export async function getStaticPaths() {
     const expeditions = await getCollection('expeditions');
@@ -14,6 +15,9 @@ const { Content } = await expedition.render();
 ---
 
 <Base>
+    {expedition.data.image && <Image src={expedition.data.image} alt="" />}
     <h1>{expedition.data.title}</h1>
+    <time datetime="">{expedition.data.date}</time>
     <Content />
+    <p><a href="/programs/expeditions/"><- Back to expeditions</a>.</p>
 </Base>

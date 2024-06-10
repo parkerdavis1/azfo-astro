@@ -1,5 +1,9 @@
 ---
-import Base from '../layouts/Base.astro';
+import NewsCard from '@components/NewsCard.astro';
+import Base from '@layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const news = await getCollection('news');
+console.log('news', news);
 ---
 
 <Base>
@@ -18,27 +22,17 @@ import Base from '../layouts/Base.astro';
     </div>
     <div>
         <h2>News / Upcoming Events</h2>
-        <div>
-            <h3>New Field Expedition</h3>
-            <time>May 13 - June 2</time>
-            <p>
-                Announcing a new Field Expedition to look for breeding Mountain
-                Plovers! We will head out to a grassland area near
-                Springerville, AZ.
-            </p>
-        </div>
-        <div>
-            <h3>2024 Annual Meeting</h3>
-            <time>September 26-29</time>
-            <p>
-                <a
-                    href="https://sites.google.com/azgfd.gov/azfowbbajam2024/home"
-                    >Registration is now open!</a
-                >
-            </p>
-        </div>
+        <ul>
+            {
+                news.map((item) => (
+                    <li>
+                        <NewsCard data={item} />
+                    </li>
+                ))
+            }
+        </ul>
     </div>
-    <footer>
+    <!-- <footer>
         <h2>AZFO Quick Links</h2>
         <ul>
             <li><a href="/links">Partner Organizations</a></li>
@@ -49,5 +43,5 @@ import Base from '../layouts/Base.astro';
                 >
             </li>
         </ul>
-    </footer>
+    </footer> -->
 </Base>

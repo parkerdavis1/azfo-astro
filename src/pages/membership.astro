@@ -1,0 +1,46 @@
+---
+import Base from '@layouts/Base.astro';
+import MembershipCard from '@components/MembershipCard.astro';
+const memberships = [
+    {
+        name: 'Individual Membership',
+        cost: '$30',
+        donate: false,
+    },
+    {
+        name: 'Student Membership',
+        cost: '$15',
+        donate: false,
+    },
+    {
+        name: 'Family Membership',
+        cost: '$40',
+        donate: false,
+    },
+    {
+        name: 'Business, Organization, NGO',
+        cost: '$55',
+        donate: false,
+    },
+    {
+        name: 'Lifetime Membership',
+        cost: '$500',
+        donate: false,
+    },
+    {
+        name: 'Add a Donation to Support AZFO',
+        cost: 'Click here to go to the donations page, where you can set the amount.  Combining membership with a bit more?  Just memo that in the "notes" section.  ',
+        donate: true,
+    },
+];
+---
+
+<Base>
+    <h1>Membership</h1>
+    <p>
+        All AZFO memberships are for one calendar year. Joining mid-year? All
+        new memberships received on or after July 1 will apply to the upcoming
+        year as well, for a total of up to 18 months.
+    </p>
+    {memberships.map((membership) => <MembershipCard data={membership} />)}
+</Base>
