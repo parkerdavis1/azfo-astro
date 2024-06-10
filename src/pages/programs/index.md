@@ -24,6 +24,10 @@ AZFO volunteers can participate in several counts and surveys throughout the yea
 
 Join us for everything from avian studies to field expeditions to networking and fellowship.
 
+### [Workshops](/programs/workshops)
+
+We offer education in the field, by video, or through in-person classroom teaching.
+
 ### [AZFO Awards & Grants](/programs/awards-and-grants)
 
 We proudly sponsor Monson Grants, Achievement Awards, and Scholarships.
