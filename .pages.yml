@@ -6,6 +6,8 @@ content:
     label: News
     path: src/content/news
     type: collection
+    view:
+      fields: [title, pubDate, image, link]
     fields:
       - name: title
         label: Title
