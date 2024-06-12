@@ -7,7 +7,7 @@ image: ./images/2024-05-mountain-plovers.webp
 
 ## Registration
 
-[Register here](https://docs.google.com/forms/d/e/1FAIpQLScl03Z847IQ-3ObVwH8HVPBFzWInpTMd_Cx_aICzKdiaoNJ-A/viewform)
+[REGISTER HERE](https://docs.google.com/forms/d/e/1FAIpQLScl03Z847IQ-3ObVwH8HVPBFzWInpTMd_Cx_aICzKdiaoNJ-A/viewform)
 
 ## Description
 
