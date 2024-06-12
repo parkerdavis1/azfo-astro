@@ -21,3 +21,6 @@ content:
       - name: link
         label: Link
         type: string
+      - name: body
+        label: Body
+        type: rich-text
