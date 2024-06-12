@@ -28,12 +28,13 @@ const news = defineCollection({
             title: z.string(),
             pubDate: z.date(),
             pinned: z.boolean().default(false),
-            image: image(),
-            link: z.string().url(),
+            image: image().optional(),
+            link: z.string().optional(),
         }),
 });
 
 export const collections = {
     team,
     expeditions,
+    news,
 };

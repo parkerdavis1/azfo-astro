@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const {
     slug,
     body,
@@ -8,6 +10,7 @@ const {
 const { Content } = await Astro.props.data.render();
 ---
 
+<Image src={image} width={100} alt="alt" />
 <h3>
     {link ? <a href={link}>{title}</a> : title}
 </h3>
