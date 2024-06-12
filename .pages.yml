@@ -16,4 +16,4 @@ content:
             label: Map PDF
             type: image
             options:
-              categories: document
+              extensions: [pdf]
