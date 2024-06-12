@@ -7,18 +7,8 @@ content:
       view:
           fields: [title, pubDate, image, link]
       fields:
-          - name: title
-            label: Title
-            type: string
-          - name: pubDate
-            label: Date Added
-            type: date
-          - name: image
-            label: Image
-            type: image
-          - name: link
-            label: Link
-            type: string
-          - name: body
-            label: Body
-            type: rich-text
+          - { name: title, label: Title, type: string }
+          - { name: pubDate, label: Date Added, type: date }
+          - { name: image, label: Image, type: image }
+          - { name: link, label: Link, type: string }
+          - { name: body, label: Body, type: rich-text }

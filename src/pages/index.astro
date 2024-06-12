@@ -2,7 +2,9 @@
 import NewsCard from '@components/NewsCard.astro';
 import Base from '@layouts/Base.astro';
 import { getCollection } from 'astro:content';
-const news = await getCollection('news');
+const news = (await getCollection('news')).sort(
+    (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
 console.log('news', news);
 ---
 
@@ -22,15 +24,15 @@ console.log('news', news);
     </div>
     <div>
         <h2>News / Upcoming Events</h2>
-        <ul>
-            {
-                news.map((item) => (
-                    <li>
-                        <NewsCard data={item} />
-                    </li>
-                ))
-            }
-        </ul>
+        <!-- <ul> -->
+        {
+            news.map((item) => (
+                // <li>
+                <NewsCard data={item} />
+                // </li>
+            ))
+        }
+        <!-- </ul> -->
     </div>
     <!-- <footer>
         <h2>AZFO Quick Links</h2>

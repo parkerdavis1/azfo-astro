@@ -4,15 +4,51 @@ import { Image } from 'astro:assets';
 const {
     slug,
     body,
-    data: { title, image, blurb, link },
+    data: { title, image, blurb, link, pubDate },
 } = Astro.props.data;
 
 const { Content } = await Astro.props.data.render();
 ---
 
-<Image src={image} width={100} alt="alt" />
-<h3>
-    {link ? <a href={link}>{title}</a> : title}
-</h3>
-<Content />
-<!-- <p><a href={link}>More Information</a></p> -->
+<div class="news-container">
+    {
+        image && (
+            <Image
+                src={image}
+                width={100}
+                widths={[200, 400]}
+                alt="alt"
+                class="image"
+            />
+        )
+    }
+    <div>
+        <h3>
+            {link ? <a href={link}>{title}</a> : title}
+        </h3>
+        <!-- Posted: <time datetime={pubDate}
+            >{
+                pubDate.toLocaleDateString('us-en', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                })
+            }</time
+        > -->
+        <Content />
+    </div>
+</div>
+
+<style>
+    .image {
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+    }
+    @media (min-width: 640px) {
+        .news-container {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+    }
+</style>
